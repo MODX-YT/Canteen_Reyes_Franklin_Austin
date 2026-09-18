@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/**MADE BY FRANKLIN AUSTIN G. REYES FROM IT-2109**/
 public class Canteen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -52,16 +52,16 @@ public class Canteen {
             char studentStatus = scanner.next().toUpperCase().charAt(0);
             boolean isStudent = (studentStatus == 'Y');
 
-            //Calculation for current order
+            //calculation for current order
             double itemPrice = menuPrices[itemNum - 1];
             double subtotal = itemPrice * quantity;
 
-            //Determine discount percentage
+            //determine discount percentage
             double discountRate = 0.0;
             if (isStudent && subtotal >= 500.0) {
-                discountRate = 0.15; //Student and >= $500
+                discountRate = 0.15; //student and >= $500
             } else if (isStudent) {
-                discountRate = 0.10; //Student only
+                discountRate = 0.10; //student only
             } else if (subtotal >= 500.0) {
                 discountRate = 0.05; // >= $500 only
             }
